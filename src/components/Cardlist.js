@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { ActivityIndicator,ScrollView } from 'react-native';
 import firebase from '../config'
-import ViewCat from './Viewcat'
+import CardDetail from './CardDetail'
 
 
 
@@ -29,7 +29,7 @@ renderCategories(){
     }else{
         return this.state.Categories.map(category=>{
             // console.warn(category.Name)
-            return <ViewCat key={category.Name} categoryprop={category}/>
+            return <CardDetail key={category.Name} categoryprop={category}/>
         });
     }
 }

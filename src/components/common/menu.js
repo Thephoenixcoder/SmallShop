@@ -1,25 +1,32 @@
 import React from "react";
 import { StyleSheet, View, TouchableOpacity } from "react-native";
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import Icon  from 'react-native-vector-icons/AntDesign'
 
 const Menu = props => {
   return (
          <TouchableOpacity style={styles.container} onCheck={props.onCheck}>
-            <FontAwesome style={styles.icon}  name={props.icon} />
+            <Icon style={styles.icon}  name={props.icon} />
          </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#fff",
-    padding:10,
+   
+    width:24,
+    height:24,
+    paddingTop:6,
+    paddingBottom:6,
+    paddingRight:3,
+    paddingLeft:3,
     justifyContent:'center'
   
    },
   icon: {
-    color: "#bbbdcb",
-    fontSize: 18,
+    color: "#fff",
+    fontSize:20,
+   
+   
    }
 });
 export default Menu;

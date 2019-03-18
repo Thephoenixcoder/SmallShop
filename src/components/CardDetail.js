@@ -1,10 +1,29 @@
 import React from "react";
 import { Text, View, Image, StyleSheet } from "react-native";
-import ViewCat from "./Viewcat";
+import Card from "./Card";
+import CardSection from "./Cardsection";
 
 const CardDetail = props => (
   <View style={{  flexDirection: "row" }}>
-    <ViewCat />
+     <View>
+    <Card>
+      <CardSection>
+        <View style={{ flex: 1 }}>
+          <Image
+            style={styles.categoryImage}
+            source={{ uri: props.categoryprop.url }}
+          />
+        </View>
+      </CardSection>
+
+      <CardSection>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.categoryTitle}>{props.categoryprop.Name}</Text>
+        </View>
+      </CardSection>
+    </Card>
+  </View>
+
   </View>
 );
 
