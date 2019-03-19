@@ -1,8 +1,8 @@
 //import liraries
 import React, { Component } from 'react';
-import { ActivityIndicator,ScrollView } from 'react-native';
+import { ActivityIndicator,FlatList } from 'react-native';
 import firebase from '../config'
-import CardDetail from './CardDetail'
+import CardView from './Cardview'
 
 
 
@@ -22,23 +22,21 @@ componentWillMount(){
   })
 }
 
+renderCategories=({item,index})=>{
 
-renderCategories(){
-    if(this.state.Categories.length===0){
-        return <ActivityIndicator visible={true} size="large" color="#123456" />;
+    if(item.length==0){
+                return <ActivityIndicator visible={true} size="large" color="#123456" />;
     }else{
-        return this.state.Categories.map(category=>{
-            // console.warn(category.Name)
-            return <CardDetail key={category.Name} categoryprop={category}/>
-        });
-    }
+        return <CardView key={item.id} index={item.id} categoryprop={item}/>
+     }
+   
 }
 
+
     render() {
-        const { Categories } = this.state;
-        return (
-           <ScrollView >{this.renderCategories()}</ScrollView>
-        );
+     
+        return <FlatList style={{alignSelf:'center'}}  numColumns={2} data={this.state.Categories} renderItem={this.renderCategories} ></FlatList>
+    
     }
 }
 

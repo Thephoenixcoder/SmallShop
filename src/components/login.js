@@ -19,8 +19,8 @@ import firebase from '../config'
 
 // create a component
 class Login extends Component {
-  //to hide headergenerate from react-navigation
-  static navigationOptions = { header: null }
+
+  
   constructor(props){
     super(props);
     this.state = {

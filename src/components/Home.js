@@ -3,18 +3,19 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Header from './Header'
 import Cardlist from './Cardlist'
+import Footer from './Footer'
 
 
 // create a component
 class Home extends Component {
-     //to hide headergenerate from react-navigation
-  static navigationOptions = { header: null }
+    
     render() {
         return (
             <View style={styles.container}>
                
                <Header title="Categories"/>
                <Cardlist/>
+               <Footer/>
                
             </View>
         );
@@ -25,7 +26,7 @@ class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffee33',
+        backgroundColor: '#00AF87',
     },
 });
 

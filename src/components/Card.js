@@ -1,34 +1,31 @@
 import React from "react";
-import { View, StyleSheet,TouchableHighlight,Dimensions } from "react-native";
-
-
+import { View, StyleSheet, TouchableHighlight, Dimensions } from "react-native";
 
 /* Get width of window */
-const width = Dimensions.get('window').width
-const Card = props => <View style={styles.container}>{props.children}</View>;
+const width = Dimensions.get("window").width;
+const Card = props => (
+  <TouchableHighlight  onPress={props.onPress}>
+    <View style={styles.container}>{props.children}</View>
+  </TouchableHighlight>
+);
 
 const styles = StyleSheet.create({
   container: {
-    width: (width / 2) - 15,
-    marginTop: 10,
-    marginBottom: 10,
+    width: 150,
+    margin: 10,
     padding: 5,
-    shadowColor: "#000",
+    shadowColor: "#fcfffe",
     shadowOffset: {
       width: 0,
-      height: 1,
+      height: 1
     },
     shadowOpacity: 0.18,
-    shadowRadius: 1.00,
-    
-    elevation: 1,
-    
-    backgroundColor:'#fff',
-    borderRadius:7,
-    
-    
-
-  }
+    shadowRadius: 1.0,
+    elevation: 2,
+    backgroundColor: "#fcfffe",
+    borderRadius: 7
+  },
+  
 });
 
-export default Card
+export default Card;

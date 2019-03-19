@@ -3,9 +3,10 @@ import { StyleSheet, View, TouchableOpacity } from "react-native";
 import Icon  from 'react-native-vector-icons/AntDesign'
 
 const Menu = props => {
+  const {icon ,color ,onCheck,fontsize }=props
   return (
-         <TouchableOpacity style={styles.container} onCheck={props.onCheck}>
-            <Icon style={styles.icon}  name={props.icon} />
+         <TouchableOpacity style={styles.container} onCheck={onCheck}>
+            <Icon style={[{fontSize:fontsize||25},{color:color ||'#fff'}]}  name={icon} />
          </TouchableOpacity>
   );
 };
@@ -13,8 +14,8 @@ const Menu = props => {
 const styles = StyleSheet.create({
   container: {
    
-    width:24,
-    height:24,
+    width:30,
+    height:30,
     paddingTop:6,
     paddingBottom:6,
     paddingRight:3,
@@ -22,11 +23,6 @@ const styles = StyleSheet.create({
     justifyContent:'center'
   
    },
-  icon: {
-    color: "#fff",
-    fontSize:20,
-   
-   
-   }
+  
 });
 export default Menu;

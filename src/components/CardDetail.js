@@ -1,49 +1,27 @@
-import React from "react";
-import { Text, View, Image, StyleSheet } from "react-native";
-import Card from "./Card";
-import CardSection from "./Cardsection";
+//import liraries
+import React, { Component } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const CardDetail = props => (
-  <View style={{  flexDirection: "row" }}>
-     <View>
-    <Card>
-      <CardSection>
-        <View style={{ flex: 1 }}>
-          <Image
-            style={styles.categoryImage}
-            source={{ uri: props.categoryprop.url }}
-          />
-        </View>
-      </CardSection>
+// create a component
+class CardDetail extends Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text>MyClass</Text>
+            </View>
+        );
+    }
+}
 
-      <CardSection>
-        <View style={{ flex: 1 }}>
-          <Text style={styles.categoryTitle}>{props.categoryprop.Name}</Text>
-        </View>
-      </CardSection>
-    </Card>
-  </View>
-
-  </View>
-);
-
+// define your styles
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    flex: 1
-  },
-  categoryImage: {
-    width: 80,
-    height: 80,
-    flex: 1,
-    justifyContent: "center"
-  },
-  categoryTitle: {
-    alignItems: "center",
-    flex: 1,
-    justifyContent: "center",
-    fontWeight: "bold",
-    fontSize: 15
-  }
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#2c3e50',
+    },
 });
+
+//make this component available to the app
 export default CardDetail;

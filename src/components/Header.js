@@ -7,7 +7,7 @@ const Header = props => {
     <View style={styles.container}>
       <Menu icon="menufold" />
       <Text style={styles.header}>{props.title}</Text>
-      <Menu icon="shoppingcart" />
+      <Menu icon="gift" />
     </View>
   );
 };
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     paddingRight: 16,
     paddingLeft: 16,
     height: 56,
-    backgroundColor: "#ffea00",
+    backgroundColor: "#00AF87",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
