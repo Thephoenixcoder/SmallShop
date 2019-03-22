@@ -6,7 +6,6 @@ import {
   View,
   StyleSheet,
   Image,
-  Alert,
   Text
 } from "react-native";
 //connect for firebase
@@ -34,6 +33,7 @@ class Login extends Component {
 
   componentWillMount() {
      <firebase/>
+
     }
  
 
@@ -48,7 +48,7 @@ class Login extends Component {
     }
     if(this.state.user!==null){
       //it mean  it is already login 
-      this.props.navigation.navigate('Home')
+      this.props.navigation.navigate('HomeScreen')
      
     }
 
@@ -69,9 +69,10 @@ class Login extends Component {
            onChangeText={password=>this.setState({password:password})}
            secureTextEntry={true}
          />
-  
+            {/* show error text  */}
+            <Text style={styles.errorStyle}>{this.state.error}</Text>
           <Button title="login" onPress={this.onLoginPressed.bind(this)} />
-          <Text >{this.props.error}</Text>
+         
         </View>
       );
     
@@ -83,7 +84,8 @@ class Login extends Component {
        authen: true
     });
     const {email,password}=this.state;
-
+  // reset error and loading
+  this.setState({ error: '', authen: true })
 
     firebase.auth().signInWithEmailAndPassword(email,password).then(user=>this.setState({
       authen:false,
@@ -91,13 +93,16 @@ class Login extends Component {
       error:''
       
       })
-      ).catch(()=>{
-          Alert.alert('Warning','Email/password is not match',[{
-            text:'okay'
-          }])
-      })
+      ).catch(this.onLoginFail.bind(this))
   };
 
+   onLoginFail() {
+     
+    this.setState({
+      error: 'Authentication Failed',
+      authen: false
+    })
+  }
   render() {
   
 
@@ -130,6 +135,11 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 20
+  },
+  errorStyle:{
+    color:'red',
+    fontSize:15,
+    alignSelf: 'center'
   }
  
 });

@@ -5,8 +5,8 @@ import CardSection from "./Cardsection";
 
 
 const CardView = props => (
-   <View >
-    <Card onPress={this.openDetail}>
+   <View>
+    <Card onPress={props.onPress}>
       <CardSection>
         <View style={{ flex: 1 }}>
           <Image
@@ -26,9 +26,7 @@ const CardView = props => (
 
 );
 
-openDetail= () => {
-  this.props.navigation.navigate('CardDetail')
-}
+
 
 
 

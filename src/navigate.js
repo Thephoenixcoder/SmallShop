@@ -4,12 +4,12 @@ import Login from './components/Login'
 import CardDetail from './components/CardDetail'
 
 const AppNavigator = createStackNavigator({
-  Home:Home,
-  Login:Login,
-  CardDetail:CardDetail
+  HomeScreen:Home, //to navigate between screens 
+  LoginScreen:Login,
+  CardDetailScreen:CardDetail
 
 }, {
-  initialRouteName: "Home",
+  initialRouteName: "HomeScreen",
   headerMode: 'none'
 }
 );

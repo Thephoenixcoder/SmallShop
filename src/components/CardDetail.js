@@ -4,6 +4,8 @@ import { View, Text, StyleSheet } from 'react-native';
 
 // create a component
 class CardDetail extends Component {
+
+
     render() {
         return (
             <View style={styles.container}>

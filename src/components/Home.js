@@ -8,13 +8,19 @@ import Footer from './Footer'
 
 // create a component
 class Home extends Component {
+
+    
+    openDetail= () => {
+
+        this.props.navigation.navigate('CardDetailScreen')
+      }
     
     render() {
         return (
             <View style={styles.container}>
-               
+            
                <Header title="Categories"/>
-               <Cardlist/>
+               <Cardlist onPress={this.openDetail} />
                <Footer/>
                
             </View>

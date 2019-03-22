@@ -27,7 +27,7 @@ renderCategories=({item,index})=>{
     if(item.length==0){
                 return <ActivityIndicator visible={true} size="large" color="#123456" />;
     }else{
-        return <CardView key={item.id} index={item.id} categoryprop={item}/>
+        return <CardView  index={item.id} categoryprop={item} onPress={this.props.onPress} />
      }
    
 }
@@ -41,6 +41,8 @@ renderCategories=({item,index})=>{
 }
 
 
+
+  
 
 //make this component available to the app
 export default Cardlist;
