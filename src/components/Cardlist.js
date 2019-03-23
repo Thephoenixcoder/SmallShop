@@ -11,6 +11,7 @@ import CardView from './Cardview'
 
 
 
+
 // create a component
 class Cardlist extends Component {
 state={
@@ -31,8 +32,8 @@ renderCategories=({item,index})=>{
     if(item.length==0){
         return <ActivityIndicator visible={true} size="large" color="#123456" />;
     }else{
-   
-        return <CardView index={item.id}  categoryprop={item} onPress={this.props.onPress} />
+        
+        return <CardView index={item.id}  categoryprop={item}   onItemPress={()=>this.props.onItemPress(item)}/>
      
      }
    

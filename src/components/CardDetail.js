@@ -10,11 +10,11 @@ class CardDetail extends Component {
   }
   render() {
     const { navigation } = this.props;
-    const itemId = navigation.getParam('param', 'NO-ID');
+    const itemName = navigation.getParam('param', 'NO-ID');
     return (
      
       <View style={styles.container}>
-          <Header title={JSON.stringify(itemId)}/>
+          <Header title={itemName}/>
       </View>
     );
   }

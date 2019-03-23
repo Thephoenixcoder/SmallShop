@@ -8,7 +8,7 @@ const CardView = props => {
   return(
    
    <View>
-    <Card onPress={props.onPress}>
+    <Card onPress={props.onItemPress}>
       <CardSection>
         <View style={{ flex: 1 }}>
           <Image
