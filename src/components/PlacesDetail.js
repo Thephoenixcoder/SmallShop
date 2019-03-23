@@ -15,6 +15,7 @@ class CardDetail extends Component {
      
       <View style={styles.container}>
           <Header title={itemName}/>
+          
       </View>
     );
   }

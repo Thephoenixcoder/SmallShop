@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Header from './Header'
-import Cardlist from './Cardlist'
+import Cardlist from './Categorylist'
 import Footer from './Footer'
 
 

@@ -1,12 +1,12 @@
 import { createStackNavigator ,createAppContainer} from 'react-navigation';
 import Home from './components/Home';
 import Login from './components/Login'
-import CardDetail from './components/CardDetail'
+import placesDetail from './components/PlacesDetail'
 
 const AppNavigator = createStackNavigator({
   HomeScreen:Home, //to navigate between screens 
   LoginScreen:Login,
-  CardDetailScreen:CardDetail
+  CardDetailScreen:placesDetail
 
 }, {
   initialRouteName: "HomeScreen",

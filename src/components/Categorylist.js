@@ -2,12 +2,7 @@
 import React, { Component } from 'react';
 import { ActivityIndicator,FlatList } from 'react-native';
 import firebase from '../config'
-import CardView from './Cardview'
-
-
-
-
-
+import CardView from './Categoriesview'
 
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet,TouchableOpacity, Dimensions } from "react-native";
+import { View, StyleSheet,TouchableOpacity } from "react-native";
 
 const Card = props => (
   <TouchableOpacity  onPress={props.onPress}>
