@@ -31,7 +31,7 @@ renderCategories=({item,index})=>{
     if(item.length==0){
         return <ActivityIndicator visible={true} size="large" color="#123456" />;
     }else{
-        console.warn(item.length)
+   
         return <CardView index={item.id}  categoryprop={item} onPress={this.props.onPress} />
      
      }

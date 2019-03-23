@@ -12,7 +12,7 @@ import Footer from './Footer'
 class Home extends Component {
 
     
-    openDetail= (name) => this.props.navigation.navigate('CardDetailScreen',
+    openDetail= () => this.props.navigation.navigate('CardDetailScreen',
     { param: 'param value' })
     
     render() {
