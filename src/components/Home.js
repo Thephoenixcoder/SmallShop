@@ -6,21 +6,23 @@ import Cardlist from './Cardlist'
 import Footer from './Footer'
 
 
+
+
 // create a component
 class Home extends Component {
 
     
-    openDetail= () => {
-
-        this.props.navigation.navigate('CardDetailScreen')
-      }
+    openDetail= (name) => this.props.navigation.navigate('CardDetailScreen',
+    { param: 'param value' })
     
     render() {
+        
+        
         return (
             <View style={styles.container}>
             
                <Header title="Categories"/>
-               <Cardlist onPress={this.openDetail} />
+               <Cardlist   onPress={this.openDetail} />
                <Footer/>
                
             </View>

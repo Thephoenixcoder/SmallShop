@@ -1,8 +1,6 @@
 import React from "react";
 import { View, StyleSheet,TouchableOpacity, Dimensions } from "react-native";
 
-/* Get width of window */
-const width = Dimensions.get("window").width;
 const Card = props => (
   <TouchableOpacity  onPress={props.onPress}>
     <View style={styles.container}>{props.children}</View>

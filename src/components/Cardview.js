@@ -4,7 +4,9 @@ import Card from "./Card";
 import CardSection from "./Cardsection";
 
 
-const CardView = props => (
+const CardView = props => {
+  return(
+   
    <View>
     <Card onPress={props.onPress}>
       <CardSection>
@@ -24,7 +26,7 @@ const CardView = props => (
     </Card>
 </View>
 
-);
+)};
 
 
 

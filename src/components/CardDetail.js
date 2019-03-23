@@ -1,27 +1,27 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
-// create a component
-class CardDetail extends Component {
+import Header from './Header'
 
 
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>MyClass</Text>
-            </View>
-        );
-    }
-}
+
+
+const CardDetail = props => {
+    return (
+      <View style={styles.container}>
+        <Header title={ props.navigation.state.params.param }/>
+        
+      
+      </View>
+    );
+  };
+
 
 // define your styles
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: '#00AF87',
     },
 });
 

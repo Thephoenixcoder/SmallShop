@@ -8,10 +8,14 @@ import CardView from './Cardview'
 
 
 
+
+
+
 // create a component
 class Cardlist extends Component {
 state={
     Categories:[],
+    loader:true
   
 }
 
@@ -25,17 +29,19 @@ componentWillMount(){
 renderCategories=({item,index})=>{
 
     if(item.length==0){
-                return <ActivityIndicator visible={true} size="large" color="#123456" />;
+        return <ActivityIndicator visible={true} size="large" color="#123456" />;
     }else{
-        return <CardView  index={item.id} categoryprop={item} onPress={this.props.onPress} />
+        console.warn(item.length)
+        return <CardView index={item.id}  categoryprop={item} onPress={this.props.onPress} />
+     
      }
    
 }
 
 
     render() {
-     
-        return <FlatList style={{alignSelf:'center'}}  numColumns={2} data={this.state.Categories} renderItem={this.renderCategories} ></FlatList>
+    
+        return <FlatList style={{alignSelf:'center'}}   keyExtractor={item => item.id} numColumns={2} data={this.state.Categories} renderItem={this.renderCategories} ></FlatList>
     
     }
 }
