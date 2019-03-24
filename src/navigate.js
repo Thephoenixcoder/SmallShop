@@ -9,7 +9,7 @@ const AppNavigator = createStackNavigator({
   CardDetailScreen:placesDetail
 
 }, {
-  initialRouteName: "HomeScreen",
+  initialRouteName: "LoginScreen",
   headerMode: 'none'
 }
 );

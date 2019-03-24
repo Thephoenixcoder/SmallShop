@@ -5,7 +5,7 @@ import Menu from "./common/menu";
 const Footer = () => {
   return (
     <View style={styles.footer}>
-      <Menu color="#00AF87" icon="shoppingcart" />
+      <Menu color="#ffc107" icon="shoppingcart" />
     </View>
   );
 };
@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-
     borderTopLeftRadius: 60,
     borderTopRightRadius: 60,
     shadowColor: "#000",

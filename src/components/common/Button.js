@@ -15,7 +15,7 @@ styles=StyleSheet.create({
     button:{
         height:50,
         padding: 4,
-        backgroundColor:'#00AF87',
+        backgroundColor:'#ffc107',
         alignSelf: 'stretch',
         marginTop: 10,
         justifyContent:'center',

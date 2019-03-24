@@ -70,8 +70,9 @@ class Login extends Component {
            secureTextEntry={true}
          />
             {/* show error text  */}
-            <Text style={styles.errorStyle}>{this.state.error}</Text>
+        
           <Button title="login" onPress={this.onLoginPressed.bind(this)} />
+          <Text style={styles.errorStyle}>{this.state.error}</Text>
          
         </View>
       );
@@ -109,7 +110,7 @@ class Login extends Component {
     return (
       <View style={styles.container}>
         <Image style={styles.logo} source={require("../../assets/store.png")} />
-        <Text style={styles.heading}>Small Shop</Text>
+        <Text style={styles.heading}>Stand Shop</Text>
         {this.renderCurrentState()}
       </View>
     );
@@ -127,6 +128,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ecf0f1",
     paddingTop: 30,
     alignItems: "center",
+    justifyContent:'center',
     padding: 10
   },
   logo: {

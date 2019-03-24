@@ -7,7 +7,7 @@ import CardSection from "./Cardsection";
 const CardView = props => {
   return(
    
-   <View>
+   <View style={{ width: 150}} >
     <Card onPress={props.onItemPress}>
       <CardSection>
         <View style={{ flex: 1 }}>
@@ -20,7 +20,8 @@ const CardView = props => {
 
       <CardSection>
         <View style={{ flex: 1 }}>
-          <Text style={styles.categoryTitle}>{props.categoryprop.Name}</Text>
+    
+          <Text  style={[styles.categoryTitle,{fontWeight:props.weight|| "bold"},{fontSize:props.fontsize||15}]}>{props.categoryprop.Name}</Text>
         </View>
       </CardSection>
     </Card>
@@ -33,9 +34,10 @@ const CardView = props => {
 
 
 const styles = StyleSheet.create({
+  
   categoryImage: {
-    width: 65,
-    height:65,
+    width: 70,
+    height:70,
     flex: 1,
     justifyContent: "center"
   },
@@ -43,8 +45,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flex: 1,
     justifyContent: "center",
-    fontWeight: "bold",
-    fontSize: 15
+    
   }
 });
 export default CardView;

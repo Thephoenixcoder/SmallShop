@@ -13,7 +13,9 @@ class Home extends Component {
 
     
     openDetail= (Item) => this.props.navigation.navigate('CardDetailScreen',
-    { param:Item.Name })
+    { param:Item.Name ,
+      param1:Item.id  
+       })
     
     render() {
         
@@ -34,7 +36,7 @@ class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#00AF87',
+        backgroundColor: '#ffc107',
     },
 });
 
